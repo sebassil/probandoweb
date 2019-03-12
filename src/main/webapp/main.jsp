@@ -1,7 +1,7 @@
 <html>
 	<body>
 		<h2>Sebastian Silva :D</h2>
-		<%@ page import="java.util.List" %> 
+		<%@ page import="java.util.ArrayList" %> 
 		<%! 
 			ArrayList<String> codigos = new ArrayList<String>();
 			ArrayList<String> datos = new ArrayList<String>();
