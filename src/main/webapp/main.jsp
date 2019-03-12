@@ -2,7 +2,7 @@
 	<body>
 		<h2>Sebastian Silva :D</h2>
 		<%@ page import="java.util.List" %> 
-		<% 
+		<%! 
 			ArrayList<String> codigos = new ArrayList<>();
 			ArrayList<String> datos = new ArrayList<>();
 		   	String a,b,c,d,e,usu,f; %>
