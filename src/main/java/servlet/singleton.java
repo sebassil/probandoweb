@@ -16,13 +16,14 @@ import java.util.ArrayList;
     )
 
 public class Simple{
-    private static singleton instancia=null;
+    private static Simple instancia=null;
     
-    public static singleton laconstructora(){
+    public static Simple laconstructora(){
         if(instancia==null)
         {
             instancia = new instancia();
         }
         return instancia;
     }
+    
 }
