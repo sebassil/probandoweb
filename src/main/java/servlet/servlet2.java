@@ -14,18 +14,16 @@ import java.util.ArrayList;
         name = "MyServlet", 
         urlPatterns = {"/buscaremp"}
     )
-public class servlet1 extends HttpServlet {
-
+public class servlet2 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
         Simple sebas = Simple.laconstructora();
-        String a,b,c;
+        String a,b;
         a=req.getParameter("2a");  
-        b=req.getParameter("3a");
-        c=req.getParameter("4a");
-        sebas.adicionaremp(a,b,c);
+        b=sebas.buscaremp(a);
+        out.println(b);
     }
 }
 
