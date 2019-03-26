@@ -19,9 +19,9 @@ public class AdicionarEmp extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
 
-        out.write("hello heroku".getBytes());
-        out.flush();
-        out.close();
+        Empleado sebas = new Empleado(); 
+
+        out.println("hello heroku");
     }
     
 }
