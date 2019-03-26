@@ -26,4 +26,21 @@ public class Simple{
         Empleado nuevo = new Empleado(a,b,c);
         empleados.add(nuevo);
     }
+
+    public String buscaremp(String a){
+        String men;
+        int c=0;
+        for(int i=0;i<empleados.size();i++){
+            if(empleados.get(i).getNombre().equals(a)){
+                men = empleados.get(i).toString();
+                c++;
+            }              
+        }
+
+        if(c==0){
+            men="no existe";
+        }
+
+        return men;
+    }
 }
