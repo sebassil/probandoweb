@@ -19,12 +19,14 @@ public class servlet1 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        ServletOutputStream out = resp.getOutputStream();
         Simple sebas = Simple.laconstructora();
         String a,b,c;
         a=req.getParameter("2a");  
         b=req.getParameter("3a");
         c=req.getParameter("4a");
         sebas.adicionaremp(a,b,c);
+        out.println("guardado");
     }
 }
 

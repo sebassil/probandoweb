@@ -22,7 +22,7 @@ public class servlet4 extends HttpServlet {
         Simple sebas = Simple.laconstructora();
         String a,b;
         a=req.getParameter("2a");  
-        b=sebas.buscaremp(a);
+        b=sebas.buscarpro(a);
         out.println(b);
     }
 }

@@ -13,7 +13,8 @@ import java.util.ArrayList;
 public class Simple{
     private static Simple instancia=null;
     ArrayList<Empleado> empleados = new ArrayList<Empleado>();
-    
+    ArrayList<Proyecto> proyectos = new ArrayList<Proyecto>();
+
     public static Simple laconstructora(){
         if(instancia==null)
         {
@@ -39,7 +40,26 @@ public class Simple{
         if(c==0){
             men="no existe";
         }
+        return men;
+    }
 
+    public void adicionarpro(String a,String b,String c,String d, String e){
+        Proyecto nuevo = new Proyecto(a,b,c,d,e);
+        proyectos.add(nuevo);
+    }
+
+    public String buscarpro(String a){
+        String men="";
+        int c=0;
+        for(int i=0;i<proyectos.size();i++){
+            if(proyectos.get(i).getCodigo().equals(a)){
+                men = proyectos.get(i).toString();
+                c++;
+            }              
+        }
+        if(c==0){
+            men="no existe";
+        }
         return men;
     }
 }
