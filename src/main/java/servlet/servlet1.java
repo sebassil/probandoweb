@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
 @WebServlet(
-        name = "MyServlet", 
+        name = "MyServlet1", 
         urlPatterns = {"/adicionaremp"}
     )
 public class servlet1 extends HttpServlet {

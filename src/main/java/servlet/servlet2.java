@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
 @WebServlet(
-        name = "MyServlet", 
+        name = "MyServlet2", 
         urlPatterns = {"/buscaremp"}
     )
 public class servlet2 extends HttpServlet {
