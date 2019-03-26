@@ -48,8 +48,7 @@ public class Empleado{
     public void setHabilidades(String habilidades) {
         this.habilidades = habilidades;
     }
-
-    @Override
+    
     public String toString() {
         return this.codigo+","+this.nombre+","+this.habilidades;
     }
