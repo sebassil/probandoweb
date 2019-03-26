@@ -76,7 +76,7 @@ public class Simple{
         }
 
         for(int j=0;j<proyectos.size();j++){
-            if(proyectos.get(i).getCodigo().equals(a)){
+            if(proyectos.get(j).getCodigo().equals(a)){
                 pro=true;
             }              
         }
