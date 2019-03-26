@@ -20,10 +20,14 @@ public class servlet2 extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
         Simple sebas = Simple.laconstructora();
-        String a,b;
+        String a;
+        ArrayList<Empleado> b = new ArrayList<Empleado>();
         a=req.getParameter("2a");  
-        b=sebas.buscaremp(a);
-        out.println(b);
+        b=sebas.todos();
+        for(int i=0;i<b.size();i++){
+            out.println(b.get(i).toString());               
+        }
+        
     }
 }
 
