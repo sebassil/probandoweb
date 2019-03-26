@@ -27,14 +27,9 @@ public static class Simple{
         return instancia;
     }
     
-    public void adicionaremp(){
-        String cod,nomb,hab;
-        a=request.getParameter("2a");  
-        b=request.getParameter("3a");
-        c=request.getParameter("4a");
-
+    public void adicionaremp(String a,String b,String c){
         Empleado nuevo = new Empleado(a,b,c);
         empleados.add(nuevo);
-        out.println(nuevo.toString());
+        out.println(nuevo);
     }
 }

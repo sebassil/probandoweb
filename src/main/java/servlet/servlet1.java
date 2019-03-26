@@ -21,7 +21,11 @@ public class HelloServlet extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
         Simple sebas = Simple.laconstructora();
-        sebas.adicionaremp();
+        String a,b,c;
+        a=request.getParameter("2a");  
+        b=request.getParameter("3a");
+        c=request.getParameter("4a");
+        sebas.adicionaremp(a,b,c);
     }
 }
 

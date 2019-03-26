@@ -49,6 +49,7 @@ public class Empleado{
         this.habilidades = habilidades;
     }
     
+    @Override
     public String toString() {
         return this.codigo+","+this.nombre+","+this.habilidades;
     }
