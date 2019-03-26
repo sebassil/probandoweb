@@ -14,7 +14,7 @@ import java.util.ArrayList;
         name = "MyServlet", 
         urlPatterns = {"/adicionaremp"}
     )
-public class HelloServlet extends HttpServlet {
+public class servlet1 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
