@@ -17,7 +17,7 @@ public class Simple{
     public static Simple laconstructora(){
         if(instancia==null)
         {
-            instancia = new instancia();
+            instancia = new Simple();
         }
         return instancia;
     }
