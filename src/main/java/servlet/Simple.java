@@ -42,8 +42,4 @@ public class Simple{
 
         return men;
     }
-
-    public ArrayList todos(){
-        return empleados;
-    }
 }

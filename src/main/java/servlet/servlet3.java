@@ -11,19 +11,24 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
 @WebServlet(
-        name = "MyServlet2", 
-        urlPatterns = {"/buscaremp"}
+        name = "MyServlet1", 
+        urlPatterns = {"/adicionaremp"}
     )
-public class servlet2 extends HttpServlet {
+public class servlet1 extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
         Simple sebas = Simple.laconstructora();
-        String a,b;
+        String a,b,c,d,e;
         a=req.getParameter("2a");  
-        b=sebas.buscaremp(a);
-        out.println(b);
+        b=req.getParameter("3a");
+        c=req.getParameter("4a");
+        d=req.getParameter("5a");
+        e=req.getParameter("6a");
+        sebas.adicionaremp(a,b,c,d,e);
+        out.println("se guardo");
     }
 }
 
