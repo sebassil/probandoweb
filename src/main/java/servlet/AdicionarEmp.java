@@ -25,10 +25,7 @@ public class AdicionarEmp extends HttpServlet {
 
         Empleado sebas = new Empleado("sebas ","es un"," crack"); 
         empleados.add(sebas);
-
-        for(int i=0;i<empleados.size();i++){
-            out.println(empleados.get(i).toString());
-        }
+        out.println(sebas.toString());
     }
     
 }
