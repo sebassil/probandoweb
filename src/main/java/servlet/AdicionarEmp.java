@@ -21,7 +21,7 @@ public class AdicionarEmp extends HttpServlet {
 
         Empleado sebas = new Empleado(); 
 
-        out.println(sebas);
+        out.println(sebas.getCodigo());
     }
     
 }
