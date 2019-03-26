@@ -15,10 +15,23 @@ import java.util.ArrayList;
         urlPatterns = {"/adicionaremp"}
     )
 
-public class Adicionaremp{
+public class Adicionaremp extends HttpServlet {
     ArrayList<Empleado> empleados = new ArrayList<Empleado>();
-    
-    public void Adicionar(){
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        ServletOutputStream out = resp.getOutputStream();
+
         out.println("sebas");
+        String a =request.getParameter("2a");  
+        String b =request.getParameter("3a");
+        String c =request.getParameter("4a");
+        Empleado nuevo = new Empleado(a,b,c);
+        empleados.add(nuevo);
+        for(int i=0;i<codigos.size();i++){
+            out.println(empleados.get(i));
+        }    
     }
+    
 }
