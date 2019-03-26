@@ -27,7 +27,6 @@ public class servlet1 extends HttpServlet {
         c=req.getParameter("4a");
         sebas.adicionaremp(a,b,c);
         out.println("guardado");
-        resp.sendRedirect("index.htlm"); 
     }
 }
 
