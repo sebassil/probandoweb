@@ -85,7 +85,7 @@ public class Simple{
             if(pro){
                 Relacion nuevo = new Relacion(a,b);
                 relaciones.add(nuevo);
-                m=nuevo.toString();
+                m="guardado";
             }else{
                 m="No existe un proyecto con este codigo";
             }
