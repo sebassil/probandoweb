@@ -8,11 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(
-        name = "MyServlet", 
-        urlPatterns = {"/proyecto"}
-    )
-
 public class Proyecto(){
     private String codigo;
     private String nombre;
@@ -31,9 +26,9 @@ public class Proyecto(){
     public Proyecto(String codigo,String nombre,String descripcion,String tiempo,String plataformas){
         this.codigo = codigo;
         this.nombre = nombre;
-        this.descripcion = "";
-        this.tiempo = "";
-        this.plataformas = "";
+        this.descripcion = descripcion;
+        this.tiempo = tiempo;
+        this.plataformas = plataformas;
     }
 
     public String getCodigo() {
