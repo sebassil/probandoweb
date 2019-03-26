@@ -21,10 +21,7 @@ public class AdicionarEmp extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
 
-        ArrayList<Empleado> empleados = new ArrayList<Empleado>;
-
         Empleado sebas = new Empleado("sebas ","es un"," crack"); 
-        empleados.add(sebas);
         out.println(sebas.toString());
     }
     
