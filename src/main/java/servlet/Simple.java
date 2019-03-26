@@ -13,7 +13,6 @@ import java.util.ArrayList;
 public class Simple{
     private static Simple instancia=null;
     ArrayList<Empleado> empleados = new ArrayList<Empleado>();
-    ArrayList<Empleado> empleados = new ArrayList<Empleado>();
     
     public static Simple laconstructora(){
         if(instancia==null)
@@ -33,7 +32,7 @@ public class Simple{
         int c=0;
         for(int i=0;i<empleados.size();i++){
             if(empleados.get(i).getCodigo().equals(a)){
-                men = empleados.get(i);
+                men = empleados.get(i).toString();
                 c++;
             }              
         }
