@@ -21,11 +21,14 @@ public class AdicionarEmp extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
 
-        
-        
-        Empleado sebas = new Empleado("sebas ","es un"," crack"); 
+        ArrayList<Empleado> empleados = new ArrayList<Empleado>;
 
-        out.println(sebas.toString());
+        Empleado sebas = new Empleado("sebas ","es un"," crack"); 
+        empleados.add(sebas);
+
+        for(int i=0;i<empleados.size();i++){
+            out.println(empleados.get(i).toString());
+        }
     }
     
 }
