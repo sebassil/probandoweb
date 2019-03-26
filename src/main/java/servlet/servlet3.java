@@ -27,7 +27,7 @@ public class servlet1 extends HttpServlet {
         c=req.getParameter("4a");
         d=req.getParameter("5a");
         e=req.getParameter("6a");
-        sebas.adicionaremp(a,b,c,d,e);
+        sebas.adicionaremp(a,b,c);
         out.println("se guardo");
     }
 }
