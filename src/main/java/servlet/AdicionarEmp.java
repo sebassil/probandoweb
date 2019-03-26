@@ -19,7 +19,7 @@ public class AdicionarEmp extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
 
-        Empleado sebas = new Empleado("sebas","es","un crack"); 
+        Empleado sebas = new Empleado(); 
 
         out.println(sebas);
     }
