@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
 @WebServlet(
-        name = "MyServlet5", 
-        urlPatterns = {"/adicionarrel"}
+        name = "MyServlet7", 
+        urlPatterns = {"/relpro"}
     )
 
-public class servlet5 extends HttpServlet {
+public class servlet7 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
