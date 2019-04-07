@@ -12,9 +12,7 @@ import java.util.ArrayList;
 
 public class Simple{
     private static Simple instancia=null;
-    ArrayList<Empleado> empleados = new ArrayList<Empleado>();
-    ArrayList<Proyecto> proyectos = new ArrayList<Proyecto>();
-    ArrayList<Relacion> relaciones = new ArrayList<Relacion>();
+    ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
 
     public static Simple laconstructora(){
         if(instancia==null)
@@ -24,17 +22,17 @@ public class Simple{
         return instancia;
     }
     
-    public void adicionaremp(String a,String b,String c){
-        Empleado nuevo = new Empleado(a,b,c);
-        empleados.add(nuevo);
+    public void adicionarusu(String a,String b){
+        Usuario nuevo = new Usuario(a,b);
+        usuarios.add(nuevo);
     }
 
-    public String buscaremp(String a){
+    public String buscarusu(String a){
         String men="";
         int c=0;
-        for(int i=0;i<empleados.size();i++){
-            if(empleados.get(i).getCodigo().equals(a)){
-                men = empleados.get(i).toString();
+        for(int i=0;i<usuarios.size();i++){
+            if(usuarios.get(i).getCorreo().equals(a)){
+                men = usuarios.get(i).toString();
                 c++;
             }              
         }
@@ -43,89 +41,4 @@ public class Simple{
         }
         return men;
     }
-
-    public void adicionarpro(String a,String b,String c,String d, String e){
-        Proyecto nuevo = new Proyecto(a,b,c,d,e);
-        proyectos.add(nuevo);
-    }
-
-    public String buscarpro(String a){
-        String men="";
-        int c=0;
-        for(int i=0;i<proyectos.size();i++){
-            if(proyectos.get(i).getCodigo().equals(a)){
-                men = proyectos.get(i).toString();
-                c++;
-            }              
-        }
-        if(c==0){
-            men="no existe";
-        }
-        return men;
-    }
-
-    public String adicionarrel(String a,String b){
-        String m="";
-        boolean emp = false;
-        boolean pro = false;
-
-        for(int i=0;i<empleados.size();i++){
-            if(empleados.get(i).getCodigo().equals(a)){
-                emp=true;
-            }              
-        }
-
-        for(int j=0;j<proyectos.size();j++){
-            if(proyectos.get(j).getCodigo().equals(b)){
-                pro=true;
-            }              
-        }
-
-        if(emp){
-            if(pro){
-                Relacion nuevo = new Relacion(a,b);
-                relaciones.add(nuevo);
-                m="guardado";
-            }else{
-                m="No existe un proyecto con este codigo";
-            }
-        }else{
-            m="No existe un empleado con este codigo";
-        }
-        return m;
-    }
-
-        public ArrayList buscarrelpro(String a){
-            ArrayList<String> n = new ArrayList<String>();
-
-            int c=0;
-            for(int i=0;i<relaciones.size();i++){
-                if(relaciones.get(i).getCodigo().equals(a)){
-                    n.add(relaciones.get(i).getId());
-                    c++;
-                }              
-            }
-
-            if(c==0){
-                n.add("no hay una relacion con este proyecto");
-            }
-            return n;
-        }
-
-        public ArrayList buscarrelemp(String a){
-            ArrayList<String> n = new ArrayList<String>();
-
-            int c=0;
-            for(int i=0;i<relaciones.size();i++){
-                if(relaciones.get(i).getId().equals(a)){
-                    n.add(relaciones.get(i).getCodigo());
-                    c++;
-                }              
-            }
-
-            if(c==0){
-                n.add("no hay una relacion con este proyecto");
-            }
-            return n;
-        }
 }
