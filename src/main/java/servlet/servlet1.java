@@ -20,10 +20,11 @@ public class servlet1 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         Simple sebas = Simple.laconstructora();
-        String a,b,c;
+        String a,b;
         a=req.getParameter("2a");  
         b=req.getParameter("3a");
         sebas.adicionarusu(a,b);
+        req.getRequestDispatcher("/index.html").forward(req,resp);
     }
 }
 
