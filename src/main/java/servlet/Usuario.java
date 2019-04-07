@@ -13,7 +13,7 @@ public class Usuario{
     private String clave;
     
     public Usuario(){
-        this.codigo = "";
+        this.correo = "";
         this.clave = "";
     }
 
