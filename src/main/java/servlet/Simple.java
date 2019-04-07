@@ -95,37 +95,37 @@ public class Simple{
         return m;
     }
 
-    public ArrayList buscarrelpro(String a){
-        ArrayList<String> n = new ArrayList<String>();
+        public ArrayList buscarrelpro(String a){
+            ArrayList<String> n = new ArrayList<String>();
 
-        int c=0;
-        for(int i=0;i<relaciones.size();i++){
-            if(relaciones.get(i).getCodigo().equals(a)){
-                n.add(relaciones.get(i).getId());
-                c++;
-            }              
+            int c=0;
+            for(int i=0;i<relaciones.size();i++){
+                if(relaciones.get(i).getCodigo().equals(a)){
+                    n.add(relaciones.get(i).getId());
+                    c++;
+                }              
+            }
+
+            if(c==0){
+                n.add("no hay una relacion con este proyecto");
+            }
+            return n;
         }
 
-        if(c==0){
-            n.add("no hay una relacion con este proyecto");
-        }
-        return n;
-    }
+        public ArrayList buscarrelemp(String a){
+            ArrayList<String> n = new ArrayList<String>();
 
-    public ArrayList buscarrelemp(String a){
-        ArrayList<String> n = new ArrayList<String>();
+            int c=0;
+            for(int i=0;i<relaciones.size();i++){
+                if(relaciones.get(i).getId().equals(a)){
+                    n.add(relaciones.get(i).getCodigo());
+                    c++;
+                }              
+            }
 
-        int c=0;
-        for(int i=0;i<relaciones.size();i++){
-            if(relaciones.get(i).getId().equals(a)){
-                n.add(relaciones.get(i).getCodigo());
-                c++;
-            }              
+            if(c==0){
+                n.add("no hay una relacion con este proyecto");
+            }
+            return n;
         }
-
-        if(c==0){
-            n.add("no hay una relacion con este proyecto");
-        }
-        return n;
-    }
 }
