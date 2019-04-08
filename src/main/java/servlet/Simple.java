@@ -69,6 +69,10 @@ public class Simple{
             }    
         }
 
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
+        Date date1 = sdf.parse(c); 
+        Date date2 = sdf.parse(d);
+        Date date3 = sdf.parse("1995-02-23");
         //Fechas
         if(!c.equals("")){
             for(int j=0;j<productos.size();j++){
