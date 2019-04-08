@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 @WebServlet(
         name = "MyServlet1", 
-        urlPatterns = {"/adicionarusu"}
+        urlPatterns = {"/ingresar"}
     )
 
 public class servlet1 extends HttpServlet {
@@ -20,11 +20,12 @@ public class servlet1 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         Simple sebas = Simple.laconstructora();
-        String a,b;
+        String a,b,c;
         a=req.getParameter("2a");  
         b=req.getParameter("3a");
-        sebas.adicionarusu(a,b);
-        req.getRequestDispatcher("/Adicionarusu.html").forward(req,resp);
+        c=sebas.ingresar(a,b);
+        req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
+        resp.outPrintln(c);
     }
 }
 

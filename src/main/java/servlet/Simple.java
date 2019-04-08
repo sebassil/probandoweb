@@ -27,18 +27,21 @@ public class Simple{
         usuarios.add(nuevo);
     }
 
-    public String buscarusu(String a){
-        String men="";
+    public String ingresar(String correo,String clave){
+        String res="";
         int c=0;
+
         for(int i=0;i<usuarios.size();i++){
-            if(usuarios.get(i).getCorreo().equals(a)){
-                men = usuarios.get(i).toString();
-                c++;
+            if(usuarios.get(i).getCorreo().equals(correo)){
+                if(usuarios.get(i).getClave().equals(clave){
+                    c++;
+                    res="Encontrado"
+                }
             }              
         }
         if(c==0){
-            men="no existe";
+            res="Correo o contraseña errados";
         }
-        return men;
+        return res;
     }
 }
