@@ -36,7 +36,7 @@ public class Simple{
             if(usuarios.get(i).getCorreo().equals(correo)){
                 if(usuarios.get(i).getClave().equals(clave)){
                     s=true;
-                    usuario=usuarios.get(i);
+                    activo=usuarios.get(i);
                 }
             }              
         }

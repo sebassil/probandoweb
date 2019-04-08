@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
 @WebServlet(
-        name = "MyServlet3", 
-        urlPatterns = {"/vender"}
+        name = "MyServlet4", 
+        urlPatterns = {"/buscarOfertas"}
     )
 
-public class servlet3 extends HttpServlet {
+public class servlet4 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -27,8 +27,8 @@ public class servlet3 extends HttpServlet {
         b=req.getParameter("3a");
         c=req.getParameter("4a");  
         d=req.getParameter("5a");
-        e=req.getParameter("6a");    
-        sebas.buscarOfertas(a,b,c,d,e);
+        e=Integer.parseInt(req.getParameter("6a"));    
+        //sebas.buscarOfertas(a,b,c,d,e);
         out.println("Guardado");
 
         out.println("<html>");

@@ -20,14 +20,14 @@ public class Producto{
 
     
     public Producto() {
-        this.codigo = "";
+        this.codigo = 0;
         this.nombrep = "";
         this.lugar = "";
         this.nombrev = "";
         this.descripcion = "";
-        this.cantidad = "";
+        this.cantidad = 0;
         this.fecha = "";
-        this.precio = "";
+        this.precio = 0;
     }
 
     public Producto(int codigo,String nombrep, String lugar, String nombrev, String descripcion, int cantidad, String fecha, int precio) {
@@ -45,7 +45,7 @@ public class Producto{
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
@@ -85,7 +85,7 @@ public class Producto{
         return cantidad;
     }
 
-    public void setCantidad(String cantidad) {
+    public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 
@@ -101,7 +101,7 @@ public class Producto{
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
     
