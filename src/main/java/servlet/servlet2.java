@@ -28,7 +28,7 @@ public class servlet2 extends HttpServlet {
         c=sebas.ingresar(a,b);
         if(c)
         {
-            req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
+            req.getRequestDispatcher("/Menu.html").forward(req,resp);
         }else{
             out.println("Usuario y contraseña no coinciden");
         }
