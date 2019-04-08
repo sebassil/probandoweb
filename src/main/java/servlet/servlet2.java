@@ -31,6 +31,7 @@ public class servlet2 extends HttpServlet {
             req.setAttribute("2a", "nada");
             req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
         }else{
+            out.println("hola");
             req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
         }
         
