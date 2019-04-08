@@ -28,15 +28,10 @@ public class servlet2 extends HttpServlet {
         c=sebas.ingresar(a,b);
         if(c)
         {
-            resp.sendRedirect("/index.html");
-            //req.getRequestDispatcher("/index.html").forward(req,resp);
-            //request.setAttribute("2a", sebas);
-            out.println("No existe"); 
+            req.setAttribute("2a", nada);
+            req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
         }else{
             req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
-            out = resp.getOutputStream();
-            System.out.println ("Mensaje a mostrar");
-            out.println("No existe");    
         }
         
     }
