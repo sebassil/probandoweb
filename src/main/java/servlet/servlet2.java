@@ -26,8 +26,8 @@ public class servlet2 extends HttpServlet {
         b=req.getParameter("3a");
         c=sebas.ingresar(a,b);
         req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
-        ServletOutputStream out = resp.getOutputStream();   
-        out.println("hola");
+        out = resp.getOutputStream();   
+        out.println(c);
     }
 }
 
