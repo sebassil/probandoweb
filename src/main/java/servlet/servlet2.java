@@ -28,7 +28,7 @@ public class servlet2 extends HttpServlet {
         c=sebas.ingresar(a,b);
         if(c)
         {
-            req.setAttribute("2a", nada);
+            req.setAttribute("2a", "nada");
             req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
         }else{
             req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
