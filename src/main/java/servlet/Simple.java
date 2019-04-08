@@ -76,6 +76,8 @@ public class Simple{
                     busqueda.remove(productos.get(j));
                 }
             }    
-        }        
+        }  
+
+        return busqueda;      
     }
 }
