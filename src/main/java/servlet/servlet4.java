@@ -30,7 +30,7 @@ public class servlet4 extends HttpServlet {
         c=req.getParameter("4a");  
         d=req.getParameter("5a");
         e=Integer.parseInt(req.getParameter("6a"));    
-        mostrar = sebas.buscarOfertas(a,b,c,d,e);
+        mostrar = sebas.buscarOferta(a,b,c,d,e);
     }
 }
 
