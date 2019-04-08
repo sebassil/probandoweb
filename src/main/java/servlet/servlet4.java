@@ -21,6 +21,8 @@ public class servlet4 extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();        
         Simple sebas = Simple.laconstructora();
+
+        ArrayList<Producto> mostrar = new ArrayList<Producto>();
         String a,b,c,d; 
         int e;
         a=req.getParameter("2a");  
@@ -28,16 +30,7 @@ public class servlet4 extends HttpServlet {
         c=req.getParameter("4a");  
         d=req.getParameter("5a");
         e=Integer.parseInt(req.getParameter("6a"));    
-        //sebas.buscarOfertas(a,b,c,d,e);
-        out.println("Guardado");
-
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<title>Hola</title>");
-        out.println("</head>");
-        out.println("<body bgcolor=\"white\">");
-        out.println("</body>");
-        out.println("</html>");
+        mostrar = sebas.buscarOfertas(a,b,c,d,e);
     }
 }
 

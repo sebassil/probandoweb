@@ -47,4 +47,35 @@ public class Simple{
         Producto nuevo = new Producto(productos.size(),a,b,c,d,e,f,g);
         productos.add(nuevo);
     }
+
+    public ArrayList buscarOferta(String a,String b,String c,String d,int e){
+        ArrayList<Producto> busqueda = (ArrayList<Producto>) productos.clone();
+
+        //nombre
+        if(!a.equals("")){
+            for(int i=0;i<productos.size();i++){
+                if(!productos.get(i).getNombrep().equals(a)){
+                    busqueda.remove(productos.get(i));
+                }
+            }
+        }
+        
+        //Lugar
+        if(!b.equals("")){
+            for(int j=0;j<productos.size();j++){
+                if(productos.get(j).getLugar().equals(b)){
+                    busqueda.remove(productos.get(j));
+                }
+            }    
+        }
+
+        //Fechas
+        if(!c.equals("")){
+            for(int j=0;j<productos.size();j++){
+                if(productos.get(j).getLugar().equals(b)){
+                    busqueda.remove(productos.get(j));
+                }
+            }    
+        }        
+    }
 }
