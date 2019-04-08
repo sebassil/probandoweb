@@ -28,9 +28,9 @@ public class servlet2 extends HttpServlet {
         c=sebas.ingresar(a,b);
         if(c)
         {
-            req.getRequestDispatcher("/index.html").forward(req,resp);
-            out = resp.getOutputStream();
-            System.out.println ("Mensaje a mostrar");
+            response.sendRedirect("index");
+            //req.getRequestDispatcher("/index.html").forward(req,resp);
+            //request.setAttribute("2a", sebas);
         }else{
             req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
             out = resp.getOutputStream();
