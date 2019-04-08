@@ -27,9 +27,9 @@ public class servlet3 extends HttpServlet {
         b=req.getParameter("3a");
         c=req.getParameter("4a");  
         d=req.getParameter("5a");
-        e=req.getParameter("6a");  
+        e=Integer.parseInt(req.getParameter("6a"));  
         f=req.getParameter("7a");
-        g=req.getParameter("8a");  
+        g=Integer.parseInt(req.getParameter("8a"));  
         sebas.agregarVenta(a,b,c,d,e,f,g);
         out.println("Guardado");
     }
