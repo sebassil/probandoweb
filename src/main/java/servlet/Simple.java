@@ -13,6 +13,8 @@ import java.util.ArrayList;
 public class Simple{
     private static Simple instancia=null;
     ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+    ArrayList<Producto> productos = new ArrayList<Producto>();
+    Usuario activo = new Usuario();
 
     public static Simple laconstructora(){
         if(instancia==null)
@@ -34,9 +36,15 @@ public class Simple{
             if(usuarios.get(i).getCorreo().equals(correo)){
                 if(usuarios.get(i).getClave().equals(clave)){
                     s=true;
+                    usuario=usuarios.get(i);
                 }
             }              
         }
         return s;
+    }
+
+    public void adicionarVenta(String a,String b,String c,String d,int e,String f,int g){
+        Producto nuevo = new Producto(productos.size(),a,b,c,d,e,f,g);
+        productos.add(nuevo);
     }
 }

@@ -25,7 +25,16 @@ public class servlet1 extends HttpServlet {
         a=req.getParameter("2a");  
         b=req.getParameter("3a");
         sebas.adicionarusu(a,b);
-        req.getRequestDispatcher("/Adicionarusu.html").forward(req,resp);
+        out.println("El usuario se ha guardado");
+
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Hola</title>");
+        out.println("</head>");
+        out.println("<body bgcolor=\"white\">");
+        out.println("estamos");
+        out.println("</body>");
+        out.println("</html>");
     }
 }
 
