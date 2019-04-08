@@ -32,6 +32,9 @@ public class servlet2 extends HttpServlet {
             out = resp.getOutputStream();
             System.out.println ("Mensaje a mostrar");
         }else{
+            req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
+            out = resp.getOutputStream();
+            System.out.println ("Mensaje a mostrar");
             out.println("No existe");    
         }
         
