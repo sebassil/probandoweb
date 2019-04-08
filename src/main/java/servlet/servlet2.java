@@ -21,13 +21,20 @@ public class servlet2 extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();        
         Simple sebas = Simple.laconstructora();
-        String a,b,c;
+        String a,b;
+        boolean c=false;
         a=req.getParameter("2a");  
         b=req.getParameter("3a");
         c=sebas.ingresar(a,b);
-        req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
-        out = resp.getOutputStream();   
-        out.println(c);
+        if(c)
+        {
+            req.getRequestDispatcher("/index.html").forward(req,resp);
+            out = resp.getOutputStream();
+            System.out.println ("Mensaje a mostrar");
+        }else{
+            out.println("No existe");    
+        }
+        
     }
 }
 
