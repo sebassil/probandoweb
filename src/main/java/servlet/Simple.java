@@ -35,7 +35,7 @@ public class Simple{
             if(usuarios.get(i).getCorreo().equals(correo)){
                 if(usuarios.get(i).getClave().equals(clave)){
                     c++;
-                    res="Encontrado"
+                    res="Encontrado";
                 }
             }              
         }
