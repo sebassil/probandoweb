@@ -28,7 +28,7 @@ public class servlet2 extends HttpServlet {
         c=sebas.ingresar(a,b);
         if(c)
         {
-            response.sendRedirect("index");
+            resp.sendRedirect("index");
             //req.getRequestDispatcher("/index.html").forward(req,resp);
             //request.setAttribute("2a", sebas);
         }else{
