@@ -28,9 +28,10 @@ public class servlet2 extends HttpServlet {
         c=sebas.ingresar(a,b);
         if(c)
         {
-            resp.sendRedirect("index");
+            resp.sendRedirect("/index.html");
             //req.getRequestDispatcher("/index.html").forward(req,resp);
             //request.setAttribute("2a", sebas);
+            out.println("No existe"); 
         }else{
             req.getRequestDispatcher("/Ingresar.html").forward(req,resp);
             out = resp.getOutputStream();
