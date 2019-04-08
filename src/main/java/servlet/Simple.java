@@ -27,21 +27,16 @@ public class Simple{
         usuarios.add(nuevo);
     }
 
-    public String ingresar(String correo,String clave){
-        String res="";
-        int c=0;
+    public boolean ingresar(String correo,String clave){
+        boolean s=false;
 
         for(int i=0;i<usuarios.size();i++){
             if(usuarios.get(i).getCorreo().equals(correo)){
                 if(usuarios.get(i).getClave().equals(clave)){
-                    c++;
-                    res="Encontrado";
+                    s=true;
                 }
             }              
         }
-        if(c==0){
-            res="Correo o contraseña errados";
-        }
-        return res;
+        return s;
     }
 }
