@@ -246,24 +246,24 @@ public class Simple{
         Producto pro = new Producto();
         String d;
         int a,b,c;
-        boolean a=false;
+        boolean esta=false;
 
         for(int j=0;j<ofertas.size();j++){
             if(ofertas.get(j).getCodigo()==a){
                 if(ofertas.get(j).getAceptada()){
                     compra=ofertas.get(j);
-                    a=true;
+                    esta=true;
                 }
             }
         }
 
         //codigo producto
 
-        if(a){
+        if(esta){
             for(int k=0;k<productos.size();k++){
                 if(productos.get(k).getCodigo()==compra.getCodigo()){
                     a=productos.get(k).getCantidad();
-                    b=compra.get(k).getCantidad();
+                    b=compra.getCantidad();
                     c=a-b;
                     productos.get(k).setCantidad(c);
                     pro=productos.get(k);
