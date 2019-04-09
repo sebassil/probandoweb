@@ -17,7 +17,12 @@ public class Simple{
     private static Simple instancia=null;
     ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
     ArrayList<Producto> productos = new ArrayList<Producto>();
+    ArrayList<Oferta> ofertas = new ArrayList<Oferta>();
+    ArrayList<Relacionpv> relacionespv = new ArrayList<Relacionpv>();
+    ArrayList<Relacionpof> relacionespof = new ArrayList<Relacionpof>();
+
     Usuario activo = new Usuario();
+    int con=0,con2=0;
 
     public static Simple laconstructora(){
         if(instancia==null)
@@ -46,10 +51,12 @@ public class Simple{
         return s;
     }
 
-    public Producto adicionarVenta(String a,String b,String c,String d,int e,String f,int g){
-        Producto nuevo = new Producto(productos.size(),a,b,c,d,e,f,g);
+    public void adicionarVenta(String a,String b,String c,String d,int e,String f,int g){
+        Producto nuevo = new Producto(con,a,b,c,d,e,f,g);
         productos.add(nuevo);
-        return nuevo;
+        Relacionpv rela = new Relacionpv(con,activo.getCorreo());
+        relacionespv.add(rela);
+        con++;
     }
 
     public ArrayList buscarOferta(String a,String b,String c,String d,int e,int f){
@@ -145,5 +152,41 @@ public class Simple{
             }
         }
         return si;
+    }
+
+    public String adicionarOferta(int a,int b,int c){
+        String d;
+        for(int i=0;i<productos.size();i++){
+            if(productos.get(i).getCodigo().equals(a)){
+                if(productos.get(i).getPrecio()<=b){
+                    d="El precio ofertado es menor que el del producto";
+                }else if(productos.get(i).getCantidad()<=b){
+                    d="La cantidad ofertada es menor que las disponibles";
+                }else{
+                    Oferta nuevo = new Oferta(con2,a,b,c);
+                    ofertas.add(nuevo);
+                    Relacionpof rela = new Relacionpof(con2,activo.getCorreo())
+                    con2++;
+                    d="has ofertado por este producto";
+                }
+            }
+        }
+        
+        return d;
+    }
+
+    public ArrayList verOfertas(int a){
+        ArrayList<String> mandar = new ArrayList<String>();
+        boolean s=false;
+        for(int i=0;i<ofertas.size();i++){
+            if(ofertas.get(i).getCodigop()==a){
+                mandar.add(ofertas.get(i).toString());
+                s=true;
+            }              
+        }
+        if(!s){
+            mandar.add("No se encontraron ofertas por este producto");
+        }
+        return mandar;
     }
 }
