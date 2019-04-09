@@ -72,8 +72,8 @@ public class Simple{
             }    
         }
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
-        Date date1;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date dateStr = formatter.parse(c);
         //Fechas
         if(!c.equals("")){
             for(int j=0;j<productos.size();j++){
