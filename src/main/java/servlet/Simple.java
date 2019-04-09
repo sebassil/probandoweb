@@ -205,8 +205,8 @@ public class Simple{
         }
 
         for(int j=0;j<ofertas.size();j++){
-            for(int k=0;k<codigop.size();k++){
-                if(ofertas.get(j).getCodigop()==codigop.get(k)){
+            for(int k=0;k<codigosp.size();k++){
+                if(ofertas.get(j).getCodigop()==codigosp.get(k)){
                     mandar.add(ofertas.get(j).toString());
                 }
             }
