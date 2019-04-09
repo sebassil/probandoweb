@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Relacionpof{
     private int codigo;
-    private int correo;
+    private String correo;
 
     public Relacionpof() {
         this.codigo = 0;
