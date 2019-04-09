@@ -245,7 +245,7 @@ public class Simple{
         Oferta compra = new Oferta();
         Producto pro = new Producto();
         String d;
-        int a,b,c;
+        int e,b,c;
         boolean esta=false;
 
         for(int j=0;j<ofertas.size();j++){
@@ -262,19 +262,19 @@ public class Simple{
         if(esta){
             for(int k=0;k<productos.size();k++){
                 if(productos.get(k).getCodigo()==compra.getCodigo()){
-                    a=productos.get(k).getCantidad();
+                    e=productos.get(k).getCantidad();
                     b=compra.getCantidad();
-                    c=a-b;
+                    c=e-b;
                     productos.get(k).setCantidad(c);
                     pro=productos.get(k);
                     c=0;
-                    a=0;
+                    e=0;
                     b=0;
                 }
             }
             d = "Vendido por: "+pro.getNombrev();
             for(int i=0;i<relacionespv.size();i++){
-                if(relacionespv.get(i).getCodigo==pro.getCodigo()){
+                if(relacionespv.get(i).getCodigo()==pro.getCodigo()){
                     d = d+" Correo: "+relacionespv.get(i).getCorreo();
                 }
             }
