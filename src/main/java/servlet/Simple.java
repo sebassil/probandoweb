@@ -157,7 +157,7 @@ public class Simple{
     public String adicionarOferta(int a,int b,int c){
         String d;
         for(int i=0;i<productos.size();i++){
-            if(productos.get(i).getCodigo().equals(a)){
+            if(productos.get(i).getCodigo()==a){
                 if(productos.get(i).getPrecio()<=b){
                     d="El precio ofertado es menor que el del producto";
                 }else if(productos.get(i).getCantidad()<=b){
