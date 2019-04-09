@@ -83,15 +83,13 @@ public class Simple{
         }
 
         //precios
-        if(!(e.equals("")) || !(f.equals(""))){
             for(int l=0;l<productos.size();l++){
             if(!(e<=productos.get(l).getPrecio())){
                 if(!(f>=productos.get(l).getPrecio())){
                     busqueda.remove(productos.get(l)); 
                 }    
             }
-        }
-        
+
         return busqueda;      
     }
 
