@@ -107,6 +107,6 @@ public class Producto{
     
     @Override
     public String toString() {
-        return this.nombrep+","+this.lugar+","+this.nombrev+","+this.descripcion+","+this.cantidad+","+this.fecha+","+this.precio; 
+        return this.codigo+","+this.nombrep+","+this.lugar+","+this.nombrev+","+this.descripcion+","+this.cantidad+","+this.fecha+","+this.precio; 
     }
 }
