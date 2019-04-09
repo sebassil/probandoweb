@@ -22,9 +22,12 @@ public class servlet1 extends HttpServlet {
         ServletOutputStream out = resp.getOutputStream();
         Simple sebas = Simple.laconstructora();
         String a,b;
+        boolean c,d;
         a=req.getParameter("2a");  
         b=req.getParameter("3a");
-        sebas.adicionarusu(a,b);
+        c=req.getParameter("4a");
+        d=req.getParameter("5a");
+        sebas.adicionarusu(a,b,c,d);
         out.println("El usuario se ha guardado");
     }
 }

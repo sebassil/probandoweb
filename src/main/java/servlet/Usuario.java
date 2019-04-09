@@ -11,15 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 public class Usuario{
     private String correo;
     private String clave;
+    private String voc;
     
     public Usuario(){
         this.correo = "";
         this.clave = "";
+        this.voc = "";
     }
 
-    public Usuario(String correo,String clave){
+    public Usuario(String correo,String clave,String voc){
         this.correo = correo;
         this.clave = clave;
+        this.voc = voc;
     }
 
     public String getCorreo() {
@@ -33,13 +36,21 @@ public class Usuario{
     public String getClave() {
         return clave;
     }
-
+    
     public void setClave(String clave) {
         this.clave = clave;
     }
     
+    public String getVoc() {
+        return voc;
+    }
+    
+    public void setVoc(String voc) {
+        this.voc = voc;
+    }
+    
     @Override
     public String toString() {
-        return this.correo+","+this.clave;
+        return this.correo+","+this.clave+","+this.voc;
     }
 }

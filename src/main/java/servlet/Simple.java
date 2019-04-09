@@ -32,8 +32,14 @@ public class Simple{
         return instancia;
     }
     
-    public void adicionarusu(String a,String b){
-        Usuario nuevo = new Usuario(a,b);
+    public void adicionarusu(String a,String b,boolean c,boolean d){
+        String e="";
+        if(c){
+            e="vendedor";
+        }else{
+            e="comprador";
+        }
+        Usuario nuevo = new Usuario(a,b,e);
         usuarios.add(nuevo);
     }
 
