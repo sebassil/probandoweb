@@ -74,12 +74,13 @@ public class Simple{
 
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
-        try(
+        try{
             Date date1 = sdf.parse(c); 
             Date date2 = sdf.parse(d);
-        ) catch(Exception ex)(
+        }
+        catch(Exception ex){
             System.out.println(ex.getMessage());
-        )
+        }
 
         
         //Fechas
