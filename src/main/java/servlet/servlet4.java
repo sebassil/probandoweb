@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 @WebServlet(
         name = "MyServlet4", 
-        urlPatterns = {"/buscarOfertas"}
+        urlPatterns = {"/buscarofertas"}
     )
 
 public class servlet4 extends HttpServlet {
@@ -24,13 +24,18 @@ public class servlet4 extends HttpServlet {
 
         ArrayList<Producto> mostrar = new ArrayList<Producto>();
         String a,b,c,d; 
-        int e;
+        int e,f;
         a=req.getParameter("2a");  
         b=req.getParameter("3a");
         c=req.getParameter("4a");  
         d=req.getParameter("5a");
-        e=Integer.parseInt(req.getParameter("6a"));    
-        mostrar = sebas.buscarOferta(a,b,c,d,e);
+        e=Integer.parseInt(req.getParameter("6a"));  
+        f=Integer.parseInt(req.getParameter("7a"));    
+        mostrar = sebas.buscarOferta(a,b,c,d,e,f);
+
+        for(int i=0;i<mostrar.size();i++){
+            out.println(mostrar.get(i).toString());    
+        }
     }
 }
 

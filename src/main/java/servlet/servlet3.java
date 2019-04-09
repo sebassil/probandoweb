@@ -30,8 +30,8 @@ public class servlet3 extends HttpServlet {
         e=Integer.parseInt(req.getParameter("6a"));  
         f=req.getParameter("7a");
         g=Integer.parseInt(req.getParameter("8a"));  
-        sebas.adicionarVenta(a,b,c,d,e,f,g);
-        out.println("Guardado");
+        Producto a = sebas.adicionarVenta(a,b,c,d,e,f,g);
+        out.println(a.toString());
     }
 }
 
