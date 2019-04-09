@@ -83,22 +83,23 @@ public class Simple{
         }
 
         //precios
-        for(int l=0;l<productos.size();l++){
+        if(!(e.equals("")) || !(f.equals(""))){
+            for(int l=0;l<productos.size();l++){
             if(!(e<=productos.get(l).getPrecio())){
                 if(!(f>=productos.get(l).getPrecio())){
                     busqueda.remove(productos.get(l)); 
                 }    
             }
         }
-
+        
         return busqueda;      
     }
 
     private boolean antes(String a,String b){
         //a antes del b
         boolean si=false;
-        String[] fecha = a.split("/");
-        String[] fecha2 = b.split("/");
+        String[] fecha = a.split("-");
+        String[] fecha2 = b.split("-");
         //d,m,a
         int dia1 = Integer.parseInt(fecha[0]);
         int mes1 = Integer.parseInt(fecha[1]);
@@ -120,8 +121,8 @@ public class Simple{
     private boolean despues(String a,String b){
         //a antes del b
         boolean si=false;
-        String[] fecha = a.split("/");
-        String[] fecha2 = b.split("/");
+        String[] fecha = a.split("-");
+        String[] fecha2 = b.split("-");
         //d,m,a
         int dia1 = Integer.parseInt(fecha[0]);
         int mes1 = Integer.parseInt(fecha[1]);
