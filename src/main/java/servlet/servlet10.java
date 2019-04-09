@@ -21,9 +21,10 @@ public class servlet9 extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();        
         Simple sebas = Simple.laconstructora();
+        String d;
         int a;
         a=Integer.parseInt(req.getParameter("2a"));
-        sebas.aceptarCompra(a);
+        d=sebas.aceptarCompra(a);
         out.println(d);
     }
 }
