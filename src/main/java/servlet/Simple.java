@@ -74,13 +74,16 @@ public class Simple{
         }
 
         //fecha
-        for(int k=0;k<productos.size();k++){
-            if(!(antes(c,productos.get(k).getFecha()))){
-                if(!(despues(d,productos.get(k).getFecha()))){
-                    busqueda.remove(productos.get(k));
+        if(c.equals("") || d.equals("")){
+            for(int k=0;k<productos.size();k++){
+                if(!(antes(c,productos.get(k).getFecha()))){
+                    if(!(despues(d,productos.get(k).getFecha()))){
+                        busqueda.remove(productos.get(k));
+                    }
                 }
-            }
+            }  
         }
+        
 
         //precios
         for(int l=0;l<productos.size();l++){
