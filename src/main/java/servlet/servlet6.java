@@ -22,9 +22,7 @@ public class servlet6 extends HttpServlet {
         ServletOutputStream out = resp.getOutputStream();        
         Simple sebas = Simple.laconstructora();
         ArrayList<String> e = new ArrayList<String>();
-        int a; 
-        a=Integer.parseInt(req.getParameter("2a"));  
-        e=sebas.verOfertas(a);
+        e=sebas.verOfertas();
         for(int i=0;i<e.size();i++){
             out.println(e.get(i));
         }

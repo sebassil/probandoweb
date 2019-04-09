@@ -32,25 +32,35 @@ public class Simple{
         return instancia;
     }
     
-    public void adicionarusu(String a,String b,boolean c,boolean d){
-        String e="";
-        if(c){
-            e="vendedor";
-        }else{
-            e="comprador";
-        }
+    public void adicionarusu(String a,String b,String c){
         Usuario nuevo = new Usuario(a,b,e);
         usuarios.add(nuevo);
     }
 
-    public boolean ingresar(String correo,String clave){
+    public boolean ingresarV(String correo,String clave){
         boolean s=false;
-
         for(int i=0;i<usuarios.size();i++){
             if(usuarios.get(i).getCorreo().equals(correo)){
                 if(usuarios.get(i).getClave().equals(clave)){
-                    s=true;
-                    activo=usuarios.get(i);
+                    if(usuarios.get(i).getVoc().equals("vendedor")){
+                        s=true;
+                        activo=usuarios.get(i);
+                    }
+                }
+            }              
+        }
+        return s;
+    }
+
+    public boolean ingresarC(String correo,String clave){
+        boolean s=false;
+        for(int i=0;i<usuarios.size();i++){
+            if(usuarios.get(i).getCorreo().equals(correo)){
+                if(usuarios.get(i).getClave().equals(clave)){
+                    if(usuarios.get(i).getVoc().equals("comprador")){
+                        s=true;
+                        activo=usuarios.get(i);
+                    }
                 }
             }              
         }
@@ -181,18 +191,98 @@ public class Simple{
         return d;
     }
 
-    public ArrayList verOfertas(int a){
+    public ArrayList verOfertas(){
         ArrayList<String> mandar = new ArrayList<String>();
+        ArrayList<Integer> codigosp = new ArrayList<Integer>();
         boolean s=false;
-        for(int i=0;i<ofertas.size();i++){
-            if(ofertas.get(i).getCodigop()==a){
-                mandar.add(ofertas.get(i).toString());
-                s=true;
-            }              
+
+        String c = activo.getCorreo();
+
+        for(int i=0;i<relacionespv.size();i++){
+            if(relacionespv.get(i).getCorreo().equals(c)){
+                codigosp.add(relacionespv.get(i).getCodigo());
+            }
         }
-        if(!s){
-            mandar.add("No se encontraron ofertas por este producto");
-        }
+
+        for(int j=0;j<ofertas.size();j++){
+            for(int k=0;k<codigop.size();k++){
+                if(ofertas.get(j).getCodigop()==codigop.get(k)){
+                    mandar.add(ofertas.get(j).toString());
+                }
+            }
+        }        
+
         return mandar;
+    }
+
+    public void aceptarOferta(int a){
+        for(int j=0;j<ofertas.size();j++){
+            if(ofertas.get(j).getCodigo()==a){
+                ofertas.get(j).setAceptada(true);
+            }
+        }
+    }
+
+    public void cancelarOferta(int a){
+        ArrayList<Oferta> eliminar = (ArrayList<Oferta>) ofertas.clone();
+        
+        for(int j=0;j<eliminar.size();j++){
+            if(eliminar.get(j).getCodigo()==a){
+                ofertas.remove(eliminar.get(j));
+            }
+        }
+    }
+
+    public void modificarOferta(int a,int b){
+        for(int j=0;j<ofertas.size();j++){
+            if(ofertas.get(j).getCodigo()==a){
+                ofertas.get(j).setPrecio(b);
+            }
+        }
+    }
+
+    public String aceptarCompra(int a){
+        Oferta compra = new Oferta();
+        Producto pro = new Producto();
+        String d;
+        int a,b,c;
+        boolean a=false;
+
+        for(int j=0;j<ofertas.size();j++){
+            if(ofertas.get(j).getCodigo()==a){
+                if(ofertas.get(j).getAceptada()){
+                    compra=ofertas.get(j);
+                    a=true;
+                }
+            }
+        }
+
+        //codigo producto
+
+        if(a){
+            for(int k=0;k<productos.size();k++){
+                if(productos.get(k).getCodigo()==compra.getCodigo()){
+                    a=productos.get(k).getCantidad();
+                    b=compra.get(k).getCantidad();
+                    c=a-b;
+                    productos.get(k).setCantidad(c);
+                    pro=productos.get(k);
+                    c=0;
+                    a=0;
+                    b=0;
+                }
+            }
+            d = "Vendido por: "+pro.getNombrev();
+            for(int i=0;i<relacionespv.size();i++){
+                if(relacionespv.get(i).getCodigo==pro.getCodigo()){
+                    d = d+" Correo: "+relacionespv.get(i).getCorreo();
+                }
+            }
+            d=d+" vendido";
+        }else{
+            d="El vendedor no ha aceptado tu oferta";
+        }
+        return d;     
+
     }
 }

@@ -21,14 +21,11 @@ public class servlet1 extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
         Simple sebas = Simple.laconstructora();
-        String a,b;
-        String c,d;
+        String a,b,c;
         a=req.getParameter("2a");  
         b=req.getParameter("3a");
         c=req.getParameter("4a");
-        d=req.getParameter("5a");
-        //sebas.adicionarusu(a,b,c,d);
-        out.println(c+" "+d);
+        sebas.adicionarusu(a,b,c);
     }
 }
 

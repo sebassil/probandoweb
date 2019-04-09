@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
 @WebServlet(
-        name = "MyServlet2", 
-        urlPatterns = {"/ingresarv"}
+        name = "MyServlet2c", 
+        urlPatterns = {"/ingresarc"}
     )
 
-public class servlet2 extends HttpServlet {
+public class servlet2c extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -25,10 +25,10 @@ public class servlet2 extends HttpServlet {
         boolean c=false;
         a=req.getParameter("2a");  
         b=req.getParameter("3a");
-        c=sebas.ingresarV(a,b);
+        c=sebas.ingresarC(a,b);
         if(c)
         {
-            req.getRequestDispatcher("/MenuV.html").forward(req,resp);
+            req.getRequestDispatcher("/MenuC.html").forward(req,resp);
         }else{
             out.println("Usuario y contraseña no coinciden");
         }
