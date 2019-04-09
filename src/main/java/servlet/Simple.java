@@ -46,7 +46,7 @@ public class Simple{
         return s;
     }
 
-    public void adicionarVenta(String a,String b,String c,String d,int e,String f,int g) throws ParseException{
+    public void adicionarVenta(String a,String b,String c,String d,int e,String f,int g){
         Producto nuevo = new Producto(productos.size(),a,b,c,d,e,f,g);
         productos.add(nuevo);
     }
@@ -72,10 +72,16 @@ public class Simple{
             }    
         }
 
+
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
-        Date date1 = sdf.parse(c); 
-        Date date2 = sdf.parse(d);
-        Date date3 = sdf.parse("1995-02-23");
+        try(
+            Date date1 = sdf.parse(c); 
+            Date date2 = sdf.parse(d);
+        ) catch(Exception ex)(
+            System.out.println(ex.getMessage());
+        )
+
+        
         //Fechas
         if(!c.equals("")){
             for(int j=0;j<productos.size();j++){
