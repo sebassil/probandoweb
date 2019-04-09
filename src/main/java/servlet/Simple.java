@@ -33,7 +33,7 @@ public class Simple{
     }
     
     public void adicionarusu(String a,String b,String c){
-        Usuario nuevo = new Usuario(a,b,e);
+        Usuario nuevo = new Usuario(a,b,c);
         usuarios.add(nuevo);
     }
 
