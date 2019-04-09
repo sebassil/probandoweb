@@ -15,7 +15,7 @@ public class Oferta{
     private int cantidad;
     private boolean aceptada;
     
-    public Usuario(){
+    public Oferta(){
         this.codigo = 0;
         this.codigop = 0;
         this.precio = 0;
