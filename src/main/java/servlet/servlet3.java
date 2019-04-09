@@ -21,7 +21,7 @@ public class servlet3 extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();        
         Simple sebas = Simple.laconstructora();
-        String a,b,c,d,f;
+        String a="",b="",c="",d="",f="";
         int e,g;
         a=req.getParameter("2a");  
         b=req.getParameter("3a");
