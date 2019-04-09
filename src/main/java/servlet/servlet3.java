@@ -31,7 +31,7 @@ public class servlet3 extends HttpServlet {
         f=req.getParameter("7a");
         g=Integer.parseInt(req.getParameter("8a"));  
         Producto z = sebas.adicionarVenta(a,b,c,d,e,f,g);
-        out.println(z.toString());
+        out.println(f);
     }
 }
 
