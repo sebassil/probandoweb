@@ -174,10 +174,10 @@ public class Simple{
         String d="";
         for(int i=0;i<productos.size();i++){
             if(productos.get(i).getCodigo()==a){
-                if(productos.get(i).getPrecio()<=b){
+                if(productos.get(i).getPrecio()>=b){
                     d="El precio ofertado es menor que el del producto";
                 }else if(productos.get(i).getCantidad()<=b){
-                    d="La cantidad ofertada es menor que las disponibles";
+                    d="La cantidad ofertada es mayor que las disponibles";
                 }else{
                     Oferta nuevo = new Oferta(con2,a,b,c);
                     ofertas.add(nuevo);

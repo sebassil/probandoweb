@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 @WebServlet(
         name = "MyServlet10", 
-        urlPatterns = {"/aceptaroferta"}
+        urlPatterns = {"/aceptarcompra"}
     )
 
 public class servlet10 extends HttpServlet {
