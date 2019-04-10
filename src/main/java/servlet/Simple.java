@@ -182,7 +182,7 @@ public class Simple{
                     Oferta nuevo = new Oferta(con2,a,b,c);
                     ofertas.add(nuevo);
                     Relacionpof rela = new Relacionpof(con2,activo.getCorreo());
-                    relacionespof(rela);
+                    relacionespof.add(rela);
                     con2++;
                     d="has ofertado por este producto";
                 }
