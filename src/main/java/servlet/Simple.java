@@ -176,7 +176,7 @@ public class Simple{
             if(productos.get(i).getCodigo()==a){
                 if(productos.get(i).getPrecio()>=b){
                     d="El precio ofertado es menor que el del producto";
-                }else if(productos.get(i).getCantidad()<=b){
+                }else if(productos.get(i).getCantidad()<=c){
                     d="La cantidad ofertada es mayor que las disponibles";
                 }else{
                     Oferta nuevo = new Oferta(con2,a,b,c);
