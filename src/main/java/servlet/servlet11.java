@@ -22,7 +22,7 @@ public class servlet11 extends HttpServlet {
         ServletOutputStream out = resp.getOutputStream();        
         Simple sebas = Simple.laconstructora();
         ArrayList<String> mostrar = new ArrayList<String>();
-        mostrar=sebas.aceptarCompra();
+        mostrar=sebas.misOfertas();
         for(int i=0;i<mostrar.size();i++){
             out.println(mostrar.get(i));
         }
