@@ -73,6 +73,12 @@ public class Oferta{
 
     @Override
     public String toString() {
-        return this.codigo+","+this.codigop+","+this.precio+","+this.cantidad+";"+this.aceptada;
+        String estado="";
+        if(this.aceptada){
+            estado="aceptada";
+        }else{
+            estado="el vendedor no ha aceptado la compra ";
+        }
+        return "Codigo: "+this.codigo+" Codigo producto: "+this.codigop+" Precio ofertado: "+this.precio+" Cantidad ofertada: "+this.cantidad+" Estado de la compra: "+estado;
     }
 }

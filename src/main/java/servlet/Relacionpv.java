@@ -40,6 +40,6 @@ public class Relacionpv{
     
     @Override
     public String toString() {
-        return this.codigo+","+this.correo; 
+        return "Codigo: "+this.codigo+" Correo:"+this.correo; 
     }
 }
