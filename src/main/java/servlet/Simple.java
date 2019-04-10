@@ -212,7 +212,6 @@ public class Simple{
                 }
             }
         }        
-
         return mandar;
     }
 
@@ -284,6 +283,28 @@ public class Simple{
             d="El vendedor no ha aceptado tu oferta";
         }
         return d;     
+    }
 
+    public ArrayList misOfertas(){
+        ArrayList<String> mandar = new ArrayList<String>();
+        ArrayList<Integer> codigosp = new ArrayList<Integer>();
+        boolean s=false;
+
+        String c = activo.getCorreo();
+
+        for(int i=0;i<relacionespof.size();i++){
+            if(relacionespof.get(i).getCorreo().equals(c)){
+                codigosp.add(relacionespv.get(i).getCodigo());
+            }
+        }
+
+        for(int j=0;j<ofertas.size();j++){
+            for(int k=0;k<codigosp.size();k++){
+                if(ofertas.get(j).getCodigop()==codigosp.get(k)){
+                    mandar.add(ofertas.get(j).toString());
+                }
+            }
+        }        
+        return mandar;
     }
 }
