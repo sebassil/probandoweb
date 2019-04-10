@@ -190,6 +190,7 @@ public class Simple{
         
         return d;
     }
+    //sebas
 
     public ArrayList verOfertas(){
         ArrayList<String> mandar = new ArrayList<String>();
