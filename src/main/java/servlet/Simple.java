@@ -182,6 +182,7 @@ public class Simple{
                     Oferta nuevo = new Oferta(con2,a,b,c);
                     ofertas.add(nuevo);
                     Relacionpof rela = new Relacionpof(con2,activo.getCorreo());
+                    relacionespof(rela);
                     con2++;
                     d="has ofertado por este producto";
                 }
@@ -287,20 +288,20 @@ public class Simple{
 
     public ArrayList misOfertas(){
         ArrayList<String> mandar = new ArrayList<String>();
-        ArrayList<Integer> codigosp = new ArrayList<Integer>();
+        ArrayList<Integer> codigosof = new ArrayList<Integer>();
         boolean s=false;
 
         String c = activo.getCorreo();
 
         for(int i=0;i<relacionespof.size();i++){
             if(relacionespof.get(i).getCorreo().equals(c)){
-                codigosp.add(relacionespof.get(i).getCodigo());
+                codigosof.add(relacionespof.get(i).getCodigo());
             }
         }
 
         for(int j=0;j<ofertas.size();j++){
-            for(int k=0;k<codigosp.size();k++){
-                if(ofertas.get(j).getCodigop()==codigosp.get(k)){
+            for(int k=0;k<codigosof.size();k++){
+                if(ofertas.get(j).getCodigo()==codigosof.get(k)){
                     mandar.add(ofertas.get(j).toString());
                 }
             }
