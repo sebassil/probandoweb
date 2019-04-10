@@ -28,6 +28,11 @@
 	  	background-color: black;
 	  	color: white;
 	}
+	
+	input[type="password"] {
+	  	background-color: black;
+	  	color: white;
+	}
 
 	#emp {
 		display:none;
