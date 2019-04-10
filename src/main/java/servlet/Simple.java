@@ -294,7 +294,7 @@ public class Simple{
 
         for(int i=0;i<relacionespof.size();i++){
             if(relacionespof.get(i).getCorreo().equals(c)){
-                codigosp.add(relacionespv.get(i).getCodigo());
+                codigosp.add(relacionespof.get(i).getCodigo());
             }
         }
 
